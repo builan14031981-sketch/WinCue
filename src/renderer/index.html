@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>WinCue · 轻唤盒子</title>
+  <link rel="stylesheet" href="fonts/misans/misans.css" />
+  <link rel="stylesheet" href="fonts/wenkai/wenkai.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="titlebar">
+    <div class="titlebar-title">
+      <span class="brand-mark" aria-hidden="true">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3c1.6 4.8 4.2 7.4 9 9-4.8 1.6-7.4 4.2-9 9-1.6-4.8-4.2-7.4-9-9 4.8-1.6 7.4-4.2 9-9Z"/>
+        </svg>
+      </span>
+      <span class="brand">轻唤盒子</span>
+    </div>
+    <div class="titlebar-actions">
+      <button class="icon-btn" id="theme-toggle" type="button" title="切换浅色 / 深色" aria-label="切换浅色或深色主题">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" id="theme-icon"></svg>
+      </button>
+      <div class="window-controls" role="group" aria-label="窗口控制">
+        <button class="window-control" id="win-min" type="button" title="最小化" aria-label="最小化">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8.5h10"/></svg>
+        </button>
+        <button class="window-control" id="win-max" type="button" title="最大化" aria-label="最大化">
+          <svg class="maximize-icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="3.5" width="9" height="9"/></svg>
+          <svg class="restore-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M5.5 5.5V3.5h7v7h-2M3.5 5.5h7v7h-7z"/></svg>
+        </button>
+        <button class="window-control close" id="win-close" type="button" title="关闭" aria-label="关闭">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8m0-8-8 8"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="shell">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main" id="main">
+      <div class="searchbar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="search-input" type="text" placeholder="搜索功能、命令或关键词，如：关机、截图、端口、DNS…" spellcheck="false" />
+        <span class="kbd-hint"><span class="kbd">Alt</span>+<span class="kbd">Space</span> 全局搜索</span>
+      </div>
+      <div id="timer-banner"></div>
+      <div id="content" style="margin-top:2px"></div>
+    </main>
+  </div>
+
+  <div class="toast-layer" id="toast-layer"></div>
+  <div class="backdrop" id="backdrop"></div>
+
+  <script src="icons.js"></script>
+  <script src="data/shortcuts.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

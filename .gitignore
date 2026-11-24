@@ -1,0 +1,19 @@
+# 依赖与构建产物
+node_modules/
+release/
+release-build/
+
+# 测试与打包中间产物
+smoke-result.json
+*.zip
+
+# 本地 AI 助手与开发工作区残留（不入开源库）
+.workbuddy/
+.mimocode/
+.trae-html-share-packages/
+audit/
+TASK_PROGRESS.md
+
+# 日志与临时备份文件
+*.log
+*.bak*

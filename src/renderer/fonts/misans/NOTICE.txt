@@ -1,0 +1,12 @@
+MiSans Font Asset Notice
+========================
+
+Files in this directory (`MiSansVF.*.woff2`, `MiSansLatinVF.woff2`, `misans.css`)
+are unmodified WOFF2 webfont slices of the **MiSans** typeface packaged via `misans@5.0.0`.
+
+- Packaging & CSS build scripts (`misans` npm package): Apache License 2.0 (see `LICENSE`).
+- **MiSans Typeface / Font Binaries**: Copyright © Beijing Xiaomi Mobile Software Co., Ltd.
+  Licensed under the official Xiaomi **MiSans Intellectual Property License** (免费商用，允许软件与网页内嵌；禁止修改字形轮廓或单独转售/再分发字库本身).
+
+These font assets are bundled strictly as UI typography assets of WinCue (轻唤盒子)
+and are NOT covered by the repository's root MIT License.

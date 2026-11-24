@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:;" />
+  <title>WinCue Search</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    html, body { background: transparent; overflow: visible; }
+  </style>
+</head>
+<body class="spot-body">
+  <div class="spot-backdrop" id="spot-backdrop"></div>
+  <div class="spot" id="spot">
+    <div class="spot-search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.6-3.6"/></svg>
+      <input id="spotlight-input" type="text" placeholder="搜索功能、命令、快捷键…" spellcheck="false" />
+    </div>
+    <div class="spot-results" id="spot-results"></div>
+    <div class="spot-footer">
+      <span class="hint"><span class="kbd">↑</span><span class="kbd">↓</span> 选择</span>
+      <span class="hint"><span class="kbd">Enter</span> 执行</span>
+      <span class="hint"><span class="kbd">Esc</span> 关闭</span>
+      <span style="margin-left:auto">WinCue · 轻唤盒子</span>
+    </div>
+  </div>
+
+  <script src="icons.js"></script>
+  <script src="spotlight.js"></script>
+</body>
+</html>

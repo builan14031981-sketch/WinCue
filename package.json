@@ -1,0 +1,46 @@
+{
+  "name": "wincue",
+  "productName": "WinCue",
+  "version": "1.0.0",
+  "description": "WinCue 轻唤盒子 — 一款安静极简的 Windows 桌面效率控制台（Alt+Space 全局搜索 / 内存瞬时加速 / C盘专清 / 百项系统捷径）",
+  "main": "src/main/main.js",
+  "author": "WinCue Contributors",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "electron .",
+    "smoke": "electron . --smoke-test",
+    "dist:dir": "electron-builder --win --dir",
+    "dist": "electron-builder --win portable"
+  },
+  "devDependencies": {
+    "electron": "^44.5.1",
+    "electron-builder": "^26.15.3"
+  },
+  "dependencies": {
+    "@electron/asar": "^3.4.1"
+  },
+  "build": {
+    "appId": "com.wincue.app",
+    "productName": "WinCue",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "src/**/*",
+      "!src/**/*.bak*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "portable"
+      ],
+      "icon": "build/icon.png"
+    },
+    "portable": {
+      "artifactName": "WinCue-Portable.exe"
+    }
+  }
+}
